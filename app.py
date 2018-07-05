@@ -1,10 +1,21 @@
 # coding: utf-8
 
+# TODO
+# pep8
+# explanatory comments
+# in-depth explanation a unique features: multi-page, external_js
+#
+# move data and read in from elsewhere
+
+
 import dash
-from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
+from dash.dependencies import Input, Output
 import plotly.graph_objs as go
+
+from components import get_header, get_logo, get_menu, make_dash_table, print_button
+
 import pandas as pd
 import os
 
@@ -12,6 +23,10 @@ app = dash.Dash(__name__)
 server = app.server
 
 # read data for tables (one df per table)
+
+# # # # # # # #
+# move these to, and read them from, plotly/datasets/vanguard
+# # # # # # # #
 df_fund_facts = pd.read_csv('https://plot.ly/~bdun9/2754.csv')
 df_price_perf = pd.read_csv('https://plot.ly/~bdun9/2756.csv')
 df_current_prices = pd.read_csv('https://plot.ly/~bdun9/2753.csv')
@@ -29,67 +44,6 @@ df_unrealized = pd.read_csv('https://plot.ly/~bdun9/2802.csv')
 
 df_graph = pd.read_csv("https://plot.ly/~bdun9/2804.csv")
 
-# reusable componenets
-def make_dash_table(df):
-    ''' Return a dash definitio of an HTML table for a Pandas dataframe '''
-    table = []
-    for index, row in df.iterrows():
-        html_row = []
-        for i in range(len(row)):
-            html_row.append(html.Td([row[i]]))
-        table.append(html.Tr(html_row))
-    return table
-
-
-def print_button():
-    printButton = html.A(['Print PDF'],className="button no-print print",style={'position': "absolute", 'top': '-40', 'right': '0'})
-    return printButton
-
-# includes page/full view
-def get_logo():
-    logo = html.Div([
-
-        html.Div([
-            html.Img(src='http://logonoid.com/images/vanguard-logo.png', height='40', width='160')
-        ], className="ten columns padded"),
-
-        html.Div([
-            dcc.Link('Full View   ', href='/full-view')
-        ], className="two columns page-view no-print")
-
-    ], className="row gs-header")
-    return logo
-
-
-def get_header():
-    header = html.Div([
-
-        html.Div([
-            html.H5(
-                'Vanguard 500 Index Fund Investor Shares')
-        ], className="twelve columns padded")
-
-    ], className="row gs-header gs-text-header")
-    return header
-
-
-def get_menu():
-    menu = html.Div([
-
-        dcc.Link('Overview   ', href='/overview', className="tab first"),
-
-        dcc.Link('Price Performance   ', href='/price-performance', className="tab"),
-
-        dcc.Link('Portfolio & Management   ', href='/portfolio-management', className="tab"),
-
-        dcc.Link('Fees & Minimums   ', href='/fees', className="tab"),
-
-        dcc.Link('Distributions   ', href='/distributions', className="tab"),
-
-        dcc.Link('News & Reviews   ', href='/news-and-reviews', className="tab")
-
-    ], className="row ")
-    return menu
 
 ## Page layouts
 overview = html.Div([  # page 1
@@ -1284,6 +1238,9 @@ app.layout = html.Div([
 ])
 
 # Update page
+# # # # # # # # #
+# detail in depth what the callback below is doing
+# # # # # # # # #
 @app.callback(dash.dependencies.Output('page-content', 'children'),
               [dash.dependencies.Input('url', 'pathname')])
 def display_page(pathname):
@@ -1305,6 +1262,9 @@ def display_page(pathname):
         return noPage
 
 
+# # # # # # # # #
+# detail the way that external_css and external_js work and link to alternative method locally hosted
+# # # # # # # # #
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css",
                 "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css",
                 "//fonts.googleapis.com/css?family=Raleway:400,300,600",
