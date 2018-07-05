@@ -4,9 +4,6 @@
 # pep8
 # explanatory comments
 # in-depth explanation a unique features: multi-page, external_js
-#
-# move data and read in from elsewhere
-
 
 import dash
 import dash_core_components as dcc
@@ -17,32 +14,26 @@ import plotly.graph_objs as go
 from components import get_header, get_logo, get_menu, make_dash_table, print_button
 
 import pandas as pd
-import os
 
 app = dash.Dash(__name__)
 server = app.server
 
 # read data for tables (one df per table)
-
-# # # # # # # #
-# move these to, and read them from, plotly/datasets/vanguard
-# # # # # # # #
-df_fund_facts = pd.read_csv('https://plot.ly/~bdun9/2754.csv')
-df_price_perf = pd.read_csv('https://plot.ly/~bdun9/2756.csv')
-df_current_prices = pd.read_csv('https://plot.ly/~bdun9/2753.csv')
-df_hist_prices = pd.read_csv('https://plot.ly/~bdun9/2765.csv')
-df_avg_returns = pd.read_csv('https://plot.ly/~bdun9/2793.csv')
-df_after_tax = pd.read_csv('https://plot.ly/~bdun9/2794.csv')
-df_recent_returns = pd.read_csv('https://plot.ly/~bdun9/2795.csv')
-df_equity_char = pd.read_csv('https://plot.ly/~bdun9/2796.csv')
-df_equity_diver = pd.read_csv('https://plot.ly/~bdun9/2797.csv')
-df_expenses = pd.read_csv('https://plot.ly/~bdun9/2798.csv')
-df_minimums = pd.read_csv('https://plot.ly/~bdun9/2799.csv')
-df_dividend = pd.read_csv('https://plot.ly/~bdun9/2800.csv')
-df_realized = pd.read_csv('https://plot.ly/~bdun9/2801.csv')
-df_unrealized = pd.read_csv('https://plot.ly/~bdun9/2802.csv')
-
-df_graph = pd.read_csv("https://plot.ly/~bdun9/2804.csv")
+df_fund_facts = pd.read_csv('data/df_fund_facts.csv')
+df_price_perf = pd.read_csv('data/df_price_perf.csv')
+df_current_prices = pd.read_csv('data/df_current_prices.csv')
+df_hist_prices = pd.read_csv('data/df_hist_prices.csv')
+df_avg_returns = pd.read_csv('data/df_avg_returns.csv')
+df_after_tax = pd.read_csv('data/df_after_tax.csv')
+df_recent_returns = pd.read_csv('data/df_recent_returns.csv')
+df_equity_char = pd.read_csv('data/df_equity_char.csv')
+df_equity_diver = pd.read_csv('data/df_equity_diver.csv')
+df_expenses = pd.read_csv('data/df_expenses.csv')
+df_minimums = pd.read_csv('data/df_minimums.csv')
+df_dividend = pd.read_csv('data/df_dividend.csv')
+df_realized = pd.read_csv('data/df_realized.csv')
+df_unrealized = pd.read_csv('data/df_unrealized.csv')
+df_graph = pd.read_csv("data/df_graph.csv")
 
 
 ## Page layouts
