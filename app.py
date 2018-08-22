@@ -35,6 +35,13 @@ df_realized = pd.read_csv('data/df_realized.csv')
 df_unrealized = pd.read_csv('data/df_unrealized.csv')
 df_graph = pd.read_csv("data/df_graph.csv")
 
+def Header():
+    return html.Div([
+        get_logo(),
+        get_header(),
+        html.Br([]),
+        get_menu()
+    ])
 
 ## Page layouts
 overview = html.Div([  # page 1
@@ -42,15 +49,9 @@ overview = html.Div([  # page 1
         print_button(),
 
         html.Div([
-
-            # Header
-            get_logo(),
-            get_header(),
-            html.Br([]),
-            get_menu(),
+            Header(),
 
             # Row 3
-
             html.Div([
 
                 html.Div([
@@ -424,12 +425,7 @@ pricePerformance = html.Div([  # page 2
         print_button(),
 
         html.Div([
-
-            # Header
-            get_logo(),
-            get_header(),
-            html.Br([]),
-            get_menu(),
+            Header(),
 
             # Row ``
 
@@ -592,12 +588,7 @@ portfolioManagement = html.Div([ # page 3
 
         html.Div([
 
-            # Header
-
-            get_logo(),
-            get_header(),
-            html.Br([]),
-            get_menu(),
+            Header(),
 
             # Row 1
 
@@ -880,12 +871,7 @@ feesMins = html.Div([  # page 4
 
         html.Div([
 
-            # Header
-
-            get_logo(),
-            get_header(),
-            html.Br([]),
-            get_menu(),
+            Header(),
 
             # Row 1
 
@@ -1108,12 +1094,7 @@ distributions = html.Div([  # page 5
 
         html.Div([
 
-            # Header
-
-            get_logo(),
-            get_header(),
-            html.Br([]),
-            get_menu(),
+            Header(),
 
             # Row 1
 
@@ -1173,12 +1154,7 @@ newsReviews = html.Div([  # page 6
 
         html.Div([
 
-            # Header
-
-            get_logo(),
-            get_header(),
-            html.Br([]),
-            get_menu(),
+            Header(),
 
             # Row 1
 
