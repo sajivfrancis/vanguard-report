@@ -1,17 +1,12 @@
 # coding: utf-8
 
-# TODO
-# pep8
-# explanatory comments
-# in-depth explanation a unique features: multi-page, external_js
-
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 
-from components import get_header, get_logo, get_menu, make_dash_table, print_button
+from components import Header, make_dash_table, print_button
 
 import pandas as pd
 
@@ -34,14 +29,6 @@ df_dividend = pd.read_csv('data/df_dividend.csv')
 df_realized = pd.read_csv('data/df_realized.csv')
 df_unrealized = pd.read_csv('data/df_unrealized.csv')
 df_graph = pd.read_csv("data/df_graph.csv")
-
-def Header():
-    return html.Div([
-        get_logo(),
-        get_header(),
-        html.Br([]),
-        get_menu()
-    ])
 
 ## Page layouts
 overview = html.Div([  # page 1

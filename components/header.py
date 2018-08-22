@@ -1,6 +1,14 @@
 import dash_html_components as html
 import dash_core_components as dcc
 
+def Header():
+    return html.Div([
+        get_logo(),
+        get_header(),
+        html.Br([]),
+        get_menu()
+    ])
+
 def get_logo():
     logo = html.Div([
 
