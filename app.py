@@ -31,7 +31,7 @@ df_graph = pd.read_csv("https://plot.ly/~bdun9/2804.csv")
 
 # reusable componenets
 def make_dash_table(df):
-    ''' Return a dash definitio of an HTML table for a Pandas dataframe '''
+    ''' Return a dash definition of an HTML table for a Pandas dataframe '''
     table = []
     for index, row in df.iterrows():
         html_row = []
@@ -156,8 +156,7 @@ overview = html.Div([  # page 1
                                         "width": 2
                                       }
                                     },
-                                    name = "500 Index Fund",
-                                    type = "bar"
+                                    name = "500 Index Fund"
                                 ),
                                 go.Bar(
                                     x = ["1 Year", "3 Year", "5 Year", "10 Year", "41 Year"],
@@ -169,8 +168,7 @@ overview = html.Div([  # page 1
                                         "width": 2
                                         }
                                     },
-                                    name = "S&P 500 Index",
-                                    type = "bar"
+                                    name = "S&P 500 Index"
                                 ),
                             ],
                             'layout': go.Layout(
@@ -680,7 +678,7 @@ portfolioManagement = html.Div([ # page 3
                                     y = ["1"],
                                     hoverinfo = "none",
                                     marker = {
-                                        "color": ["transparent"]
+                                        "opacity": 0
                                     },
                                     mode = "markers",
                                     name = "B",
@@ -734,7 +732,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0,
                                   "x1": 0.33,
                                   "xref": "paper",
@@ -750,7 +748,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0.33,
                                   "x1": 0.66,
                                   "xref": "paper",
@@ -765,7 +763,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0.66,
                                   "x1": 0.99,
                                   "xref": "paper",
@@ -780,7 +778,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0,
                                   "x1": 0.33,
                                   "xref": "paper",
@@ -795,7 +793,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0.33,
                                   "x1": 0.66,
                                   "xref": "paper",
@@ -810,7 +808,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0.66,
                                   "x1": 0.99,
                                   "xref": "paper",
@@ -825,7 +823,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0,
                                   "x1": 0.33,
                                   "xref": "paper",
@@ -840,7 +838,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 1
                                   },
                                   "opacity": 0.9,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0.33,
                                   "x1": 0.66,
                                   "xref": "paper",
@@ -855,7 +853,7 @@ portfolioManagement = html.Div([ # page 3
                                     "width": 2
                                   },
                                   "opacity": 0.3,
-                                  "type": "rectangle",
+                                  "type": "rect",
                                   "x0": 0.66,
                                   "x1": 0.99,
                                   "xref": "paper",
