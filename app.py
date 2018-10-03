@@ -1196,19 +1196,19 @@ app.layout = html.Div([
 @app.callback(dash.dependencies.Output('page-content', 'children'),
               [dash.dependencies.Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/' or pathname == '/overview':
+    if pathname == '/' or pathname == '/dash-vanguard-report/overview':
         return overview
-    elif pathname == '/price-performance':
+    elif pathname == '/dash-vanguard-report/price-performance':
         return pricePerformance
-    elif pathname == '/portfolio-management':
+    elif pathname == '/dash-vanguard-report/portfolio-management':
         return portfolioManagement
-    elif pathname == '/fees':
+    elif pathname == '/dash-vanguard-report/fees':
         return feesMins
-    elif pathname == '/distributions':
+    elif pathname == '/dash-vanguard-report/distributions':
         return distributions
-    elif pathname == '/news-and-reviews':
+    elif pathname == '/dash-vanguard-report/news-and-reviews':
         return newsReviews
-    elif pathname == '/full-view':
+    elif pathname == '/dash-vanguard-report/full-view':
         return overview,pricePerformance,portfolioManagement,feesMins,distributions,newsReviews
     else:
         return noPage
