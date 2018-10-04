@@ -1,33 +1,26 @@
 ### Dash Vanguard Report
-###### multi-page, external_css, external_scripts        
+###### multi-page, external_css, external_scripts, PDF      
 
 This is a demo of the [Dash](https://plot.ly/products/dash/) interactive Python framework developed by [Plotly](https://plot.ly/).
 
 Dash abstracts away all of the technologies and protocols required to build an interactive web-based application and is a simple and effective way to bind a user interface around your Python code.
 
-To learn more check out our [documentation](https://dash.plot.ly).
+To learn more about Dash, take a look at our [documentation](https://dash.plot.ly). If you're interested in deploying this application, check out [Dash Deployment Server](https://dash.plot.ly/dash-deployment-server/) - Plotly's commercial offering for hosting and sharing Dash Apps on-premise or in the cloud. 
 
 ##### About this repo:
 
-**Procfile**   
-This file specifies the commands that are executed by this application. For more information, see [here](https://devcenter.heroku.com/articles/procfile).
-
-**requirements.txt**   
-This file describes the python dependencies for this application.
-
-**runtime.txt**   
-This file declares the python runtime that the application is using. For more information, see [here](https://devcenter.heroku.com/articles/python-runtimes).
+For more information about the application structure, see our [Dash Deployment Server Documentation](https://dash.plot.ly/dash-deployment-server/application-structure).
 
 ##### To run this app:
 
 You can clone or download this repo:   
 ```
-git clone <repo name>
+git clone https://github.com/plotly/dash-vanguard-report.git
 ```
 
 Then cd into the repo:   
 ```
-cd <repo name>
+cd dash-vanguard-report
 ```
 
 Now create and activate a virtualenv (noting the python runtime):   
@@ -52,3 +45,5 @@ Once the dependencies have been installed, run the application:
 ```
 python app.py
 ```
+
+Then visit http://127.0.0.1:8050/dash-vanguard-report
