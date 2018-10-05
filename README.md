@@ -26,13 +26,13 @@ cd dash-vanguard-report
 Now create and activate a virtualenv (noting the python runtime):   
 On a mac:   
 ```
-virutalenv -p <python version> venv
+virtualenv -p <python version> venv
 source venv/bin/activate
 ```
 
 On a Windows:   
 ```
-virutalenv -p <python version> venv
+virtualenv -p <python version> venv
 venv/Scripts/activate
 ```
 
