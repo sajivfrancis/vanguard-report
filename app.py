@@ -1175,13 +1175,6 @@ newsReviews = html.Div([  # page 6
 
     ], className="page")
 
-noPage = html.Div([  # 404
-
-    html.P(["404 Page not found"])
-
-    ], className="no-page")
-
-
 
 # Describe the layout, or the UI, of the app
 app.layout = html.Div([
@@ -1211,7 +1204,7 @@ def display_page(pathname):
     elif pathname == '/dash-vanguard-report/full-view':
         return overview,pricePerformance,portfolioManagement,feesMins,distributions,newsReviews
     else:
-        return noPage
+        return overview
 
 
 # # # # # # # # #
