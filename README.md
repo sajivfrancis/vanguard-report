@@ -11,6 +11,13 @@ To learn more about Dash, take a look at our [documentation](https://dash.plot.l
 
 For more information about the application structure, see our [Dash Deployment Server Documentation](https://dash.plot.ly/dash-deployment-server/application-structure).
 
+#### Live App:
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+Click on image below:
+
+[![vanguard](https://github.com/sajivfrancis/vanguard-report/blob/master/data/vanguard.PNG)](https://dash-gallery.plotly.host/dash-vanguard-report/overview)
+
 ##### To run this app:
 
 You can clone or download this repo:   
